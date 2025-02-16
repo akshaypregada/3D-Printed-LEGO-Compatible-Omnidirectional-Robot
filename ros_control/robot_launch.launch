@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="your_package" type="robot_controller.py" name="robot_controller" output="screen"/>
+</launch>
