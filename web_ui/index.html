@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Omnidirectional Robot Control</title>
+</head>
+<body>
+    <h2>Robot Controller</h2>
+    <button onclick="sendCommand('forward')">Move Forward</button>
+    <button onclick="sendCommand('backward')">Move Backward</button>
+    <button onclick="sendCommand('left')">Turn Left</button>
+    <button onclick="sendCommand('right')">Turn Right</button>
+
+    <script>
+        function sendCommand(command) {
+            fetch(`/${command}`)
+                .then(response => console.log(response.text()))
+                .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
